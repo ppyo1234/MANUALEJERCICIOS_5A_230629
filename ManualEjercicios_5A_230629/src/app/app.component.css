@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    height: 100vh; /* O ajusta según sea necesario */
+  }
+  
+  .sidebar {
+    width: 20%; /* Ocupa una tercera parte */
+    background-color: green; /* Color verde */
+    min-height: 100vh;
+    color: white; /* Asegura que el texto sea visible */
+  }
+  
+  .content {
+    width: 80%; /* Ocupa los dos tercios restantes */
+    background-color: rgb(105, 145, 126); /* Fondo blanco */
+    min-height: 100vh;
+  }
+  
