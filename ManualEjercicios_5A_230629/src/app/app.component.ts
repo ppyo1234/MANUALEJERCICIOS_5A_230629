@@ -27,6 +27,13 @@ export class AppComponent {
     });
   }
 
+  // Método para iniciar sesión
+  login() {
+    this.authService.login(); // Cambia el estado de autenticación a true
+  }
+
+
+
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }

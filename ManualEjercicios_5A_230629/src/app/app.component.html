@@ -35,17 +35,15 @@
  
 </div>
 
+
 <!-- Vista cuando no está autenticado -->
 <div *ngIf="!isAuthenticated" class="not-authenticated">
   <div class="container">
-    
-
     <!-- Contenido principal -->
     <div class="content-container">
-      <!-- Navbar -->
-     
+      <!-- Botón de Iniciar sesión -->
+      <button class="login-button" (click)="login()">Iniciar sesión</button>
 
-   
       <!-- Contenido -->
       <p>Contenido principal aquí...</p>
 
@@ -53,7 +51,5 @@
         <p>Mi Footer</p>
       </footer>
     </div>
-    
   </div>
-
 </div>

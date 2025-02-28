@@ -155,6 +155,20 @@ html, body {
   overflow-x: hidden !important; /* Forzar eliminación del desplazamiento horizontal */
 }
 
+/* Estilos para el botón de inicio de sesión en la vista no autenticada */
+.login-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #218838;
+}
+
 @keyframes slide {
   0% { transform: translateX(0); }
   50% { transform: translateX(-100%); }
