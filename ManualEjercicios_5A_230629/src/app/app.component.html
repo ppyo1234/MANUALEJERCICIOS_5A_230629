@@ -1,31 +1,60 @@
-<app-navbar></app-navbar>
+<div *ngIf="isAuthenticated">
+  <app-navbar></app-navbar>
 
-<div class="container">
-  <!-- Sidebar -->
-  <div class="sidebar" [ngClass]="{ 'collapsed': !isSidebarOpen }">
-    <p>Contenido del sidebar</p>
-  </div>
-
-  <!-- Contenido principal -->
-  <div class="content-container">
-    <!-- Navbar -->
-    <nav class="navbar">
-      <button class="sidebar-toggle" (click)="toggleSidebar()">☰</button>
-      <span class="navbar-title">Mi Aplicación</span>
-    </nav>
-
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-      <span>Inicio</span> / <span>Sección</span> / <span>Página actual</span>
+  <div class="container">
+    <!-- Sidebar -->
+    <div class="sidebar" [ngClass]="{ 'collapsed': !isSidebarOpen }">
+      <p>Contenido del sidebar</p>
     </div>
 
-    <!-- Contenido -->
-    <p>Contenido principal aquí...</p>
+    <!-- Contenido principal -->
+    <div class="content-container">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <button class="sidebar-toggle" (click)="toggleSidebar()">☰</button>
+        <span class="navbar-title">Mi Aplicación</span>
+      </nav>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb">
+        <span>Inicio</span> / <span>Sección</span> / <span>Página actual</span>
+      </div>
+
+      <!-- Contenido -->
+      <p>Contenido principal aquí...</p>
+
+      <footer class="footer">
+        <p>Mi Footer</p>
+      </footer>
+    </div>
+
+    
   </div>
+
+ 
+ 
 </div>
 
-<!-- Footer -->
-<footer class="footer">
-  <p>Mi Footer</p>
-</footer>
+<!-- Vista cuando no está autenticado -->
+<div *ngIf="!isAuthenticated" class="not-authenticated">
+  <div class="container">
+    
 
+    <!-- Contenido principal -->
+    <div class="content-container">
+      <!-- Navbar -->
+     
+
+   
+      <!-- Contenido -->
+      <p>Contenido principal aquí...</p>
+
+      <footer class="footer">
+        <p>Mi Footer</p>
+      </footer>
+    </div>
+
+    
+  </div>
+
+</div>
