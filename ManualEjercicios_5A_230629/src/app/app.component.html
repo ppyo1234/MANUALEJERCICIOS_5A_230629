@@ -1,11 +1,31 @@
 <app-navbar></app-navbar>
-<div class="main-layout">
-  <app-sidebar class="sidebar"></app-sidebar>
+
+<div class="container">
+  <!-- Sidebar -->
+  <div class="sidebar" [ngClass]="{ 'collapsed': !isSidebarOpen }">
+    <p>Contenido del sidebar</p>
+  </div>
+
+  <!-- Contenido principal -->
   <div class="content-container">
-    <div class="breadcrumb">Breadcrumb</div>
-    <div class="content">
-      <app-page-content></app-page-content>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <button class="sidebar-toggle" (click)="toggleSidebar()">☰</button>
+      <span class="navbar-title">Mi Aplicación</span>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <span>Inicio</span> / <span>Sección</span> / <span>Página actual</span>
     </div>
-    <div class="footer">Footer</div>
+
+    <!-- Contenido -->
+    <p>Contenido principal aquí...</p>
   </div>
 </div>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>Mi Footer</p>
+</footer>
+
