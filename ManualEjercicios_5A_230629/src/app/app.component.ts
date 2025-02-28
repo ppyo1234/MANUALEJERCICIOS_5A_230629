@@ -13,4 +13,5 @@ import { AppPageContentComponent } from './components/page-content/app-page-cont
 })
 export class AppComponent {
   title = 'ManualEjercicios_5A_230629';
+  
 }

@@ -1,18 +1,50 @@
-.container {
-    display: flex;
-    height: 100vh; /* O ajusta según sea necesario */
-  }
-  
-  .sidebar {
-    width: 20%; /* Ocupa una tercera parte */
-    background-color: green; /* Color verde */
-    min-height: 100vh;
-    color: white; /* Asegura que el texto sea visible */
-  }
-  
-  .content {
-    width: 80%; /* Ocupa los dos tercios restantes */
-    background-color: rgb(105, 145, 126); /* Fondo blanco */
-    min-height: 100vh;
-  }
-  
+/* Establece que la pantalla ocupe todo el viewport */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Diseño de la estructura principal */
+.main-layout {
+  display: grid;
+  grid-template-columns: 250px auto; /* Sidebar a la izquierda, contenido a la derecha */
+  height: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #2c3e50; /* Color oscuro pero distinto al de la imagen */
+  color: white;
+  padding: 15px;
+}
+
+/* Contenedor del contenido */
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  background-color: #ecf0f1; /* Un gris claro */
+  padding: 10px;
+  border-bottom: 1px solid #bdc3c7;
+}
+
+/* Área de contenido principal */
+.content {
+  background-color: white;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  background-color: #34495e; /* Un color oscuro */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
