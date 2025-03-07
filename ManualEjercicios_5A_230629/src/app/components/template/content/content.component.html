@@ -1,0 +1,14 @@
+<div class="flex flex-col bg-[#FFFCDD] relative retro-font">
+    <!-- Breadcrumb (scrollable) -->
+    <div class="overflow-y-auto z-30 p-2 bg-[#805841] border-b-4 border-[#F5A2A2] shadow-md">
+      <app-breadcrumb></app-breadcrumb>
+    </div>
+  
+    <!-- Contenedor principal con contenido dinámico -->
+    <div class="flex-grow m-4 p-6 bg-[#DCF7F3] shadow-2xl rounded-lg border-4 border-[#F5A2A2] overflow-y-auto z-40">
+      <router-outlet></router-outlet>
+    </div>
+  
+    <!-- Footer fijo en la parte inferior -->
+    <app-footer class="flex flex-col h-16 bottom-17 fixed w-full z-50 bg-[#805841] border-t-4 border-[#F5A2A2] shadow-lg" ></app-footer>
+  </div>

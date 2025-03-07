@@ -1,25 +1,33 @@
-<mat-toolbar color="primary" class="sticky-toolbar">
-    <!-- Matrícula alineada a la izquierda -->
-    <span class="matricula">230629</span>
-
-    <!-- Contenedor centrado de los botones -->
-    <div class="nav-buttons">
-        <button mat-button>Ejercicios</button>
-        <button mat-button>Tareas</button>
-        <button mat-button>Exámen Práctico</button>
-        <button mat-button>Acerca de</button>
+<nav class="bg-[#2C2C2C] text-[#F0F0F0] p-4 flex justify-between items-center fixed top-0 w-full z-50">
+    <!-- Menú Principal -->
+    <div class="ml-10 flex space-x-6">
+        <button class="text-[#F0F0F0] px-4 py-2 hover:text-[#FFD700] transition-all duration-300" routerLink="/ejercicio1" >Inicio</button>
+        
+        <!-- Prácticas -->
+        <div class="relative group">
+            <button class="text-[#F0F0F0] px-4 py-2 hover:text-[#FFD700] transition-all duration-300">Prácticas ▼</button>
+            <div class="absolute hidden group-hover:block bg-[#333333] text-[#F0F0F0] mt-2 rounded">
+                <a class="block px-4 py-2 hover:bg-[#444444] transition-all duration-300" routerLink="/practica1">Práctica 1</a>
+                <a class="block px-4 py-2 hover:bg-[#444444] transition-all duration-300" routerLink="/practica2">Práctica 2</a>
+                <a class="block px-4 py-2 hover:bg-[#444444] transition-all duration-300" routerLink="/practica3">Práctica 3</a>
+            </div>
+        </div>
+        
+        <!-- Examen Práctico -->
+        <button class="text-[#F0F0F0] px-4 py-2 hover:text-[#FFD700] transition-all duration-300">Examen Práctico</button>
     </div>
 
-    <!-- Imagen de usuario alineada a la derecha -->
-    <span class="user-menu">
-        <button mat-icon-button [matMenuTriggerFor]="menu">
-            <img class="user-avatar" src="assets/img/yo.jpg" alt="User avatar">
-        </button>
-    </span>
+    <!-- Este no sirve -->
 
-    <!-- Menú que se activará -->
-    <mat-menu #menu="matMenu">
-        <button mat-menu-item>Perfil</button>
-        <button mat-menu-item  (click)="logout()">Cerrar sesión</button>
-    </mat-menu>
-</mat-toolbar>
+    <!-- Icono Usuario -->
+    <div class="relative group">
+        <button class="flex items-center space-x-2 text-[#F0F0F0] px-4 py-2 hover:text-[#FFD700] transition-all duration-300">
+            <span>230629</span>
+            <img class="w-8 h-8 rounded-full" src="https://via.placeholder.com/40" alt="User avatar" />
+        </button>
+        <div class="absolute hidden group-hover:block bg-[#333333] text-[#F0F0F0] mt-2 rounded">
+            <a class="block px-4 py-2 hover:bg-[#444444] transition-all duration-300">Perfil</a>
+            <a class="block px-4 py-2 hover:bg-[#444444] transition-all duration-300">Cerrar sesión</a>
+        </div>
+    </div>
+</nav>
