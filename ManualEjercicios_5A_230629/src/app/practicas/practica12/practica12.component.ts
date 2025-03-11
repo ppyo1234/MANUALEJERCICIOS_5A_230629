@@ -1,11 +1,17 @@
 import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-practica12',
-  imports: [],
-  templateUrl: './practica12.component.html',
-  styleUrl: './practica12.component.css'
+  standalone: true,
+  template: `
+    <nav>
+      <a href="/">Home</a>
+      |
+      <a href="/user">User</a>
+    </nav>
+    <router-outlet />
+  `,
+  imports: [RouterOutlet],
 })
-export class Practica12Component {
-
-}
+export class Practica12Component {}
