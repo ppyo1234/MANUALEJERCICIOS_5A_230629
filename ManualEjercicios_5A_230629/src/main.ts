@@ -1,7 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, Routes } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { Page1Component } from './app/pages/page1/page1.component';
+import { BienvenidaComponent } from './app/pages/Bienvenida/Bienvenida.component';
 import { Page2Component } from './app/pages/page2/page2.component';
 import { Page3Component } from './app/pages/page3/page3.component';
 import { Practica1Component } from './app/practicas/practica1/practica1.component';
@@ -14,9 +14,11 @@ import { Practica7Component } from './app/practicas/practica7/practica7.componen
 import { Practica8Component } from './app/practicas/practica8/practica8.component';
 import { Practica9Component } from './app/practicas/practica9/practica9.component';
 import { Practica10Component } from './app/practicas/practica10/practica10.component';
-
+import { Practica11Component } from './app/practicas/practica11/practica11.component';
+import { Practica12Component } from './app/practicas/practica12/practica12.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 const routes: Routes = [
-  { path: 'page1', component: Page1Component },
+  { path: 'Bienvenida', component: BienvenidaComponent },
   { path: 'page2', component: Page2Component },
   { path: 'page3', component: Page3Component },
   { path: 'practica1', component: Practica1Component},
@@ -29,9 +31,12 @@ const routes: Routes = [
   { path: 'practica8', component: Practica8Component},
   { path: 'practica9', component: Practica9Component},
   { path: 'practica10', component: Practica10Component},
-  { path: '**', redirectTo: 'page1' },
+  { path: 'practica11', component: Practica11Component},
+  { path: 'practica12', component: Practica12Component},
+  
+  { path: '**', redirectTo: 'Bienvenida' },
 ];
 
 bootstrapApplication(AppComponent, {
-  providers: [provideRouter(routes)],
+  providers: [provideRouter(routes), provideAnimationsAsync()],
 }).catch((err) => console.error(err));

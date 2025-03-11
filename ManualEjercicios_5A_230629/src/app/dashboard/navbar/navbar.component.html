@@ -1,3 +1,4 @@
+<nav *ngIf="isLoggedIn" class="bg-[#1A1A1A] text-[#E0E0E0] p-4 flex justify-center items-center fixed top-0 w-full z-50 shadow-none"></nav>
 <nav class="bg-[#1A1A1A] text-[#E0E0E0] p-4 flex justify-center items-center fixed top-0 w-full z-50 shadow-none">
   <!-- Menú Principal -->
   <div class="ml-8 flex space-x-6">
@@ -34,7 +35,16 @@
     </button>
     <div class="absolute hidden group-hover:block bg-[#222222] text-[#E0E0E0] mt-2 rounded-md w-max">
       <a class="block px-4 py-2 text-sm hover:bg-[#333333] transition-all duration-200">Perfil</a>
-      <a class="block px-4 py-2 text-sm hover:bg-[#333333] transition-all duration-200">Cerrar sesión</a>
+      <a class="block px-4 py-2 text-sm hover:bg-[#333333] transition-all duration-200" (click)="logOut()">Cerrar sesión</a>
     </div>
   </div>
 </nav>
+
+
+<!-- Pantalla de bienvenida cuando no está logueado -->
+<div *ngIf="!isLoggedIn" class="flex justify-center items-center h-screen bg-gray-800 text-white">
+  <div>
+    <h1 class="text-4xl mb-4">Bienvenido</h1>
+    <button (click)="logIn()" class="px-6 py-2 bg-[#FFD700] text-[#1A1A1A] rounded-lg transition-all duration-200">Iniciar sesión</button>
+  </div>
+</div>
