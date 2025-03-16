@@ -1,0 +1,45 @@
+<div class="bg-white text-gray-800 h-screen w-full p-4 border-r border-gray-300">
+    <!-- Título Fijo, solo muestra cuando hay una practica seleccionada -->
+    <h2 class="text-xl font-semibold mb-4" *ngIf="practicaActual">
+      {{ practicaActual.nombre }}
+    </h2>
+  
+    <!-- Si no hay practica seleccionada, mostrar mensaje de bienvenida -->
+    <div *ngIf="!practicaActual" class="flex justify-center items-center h-full text-center">
+      <p class="text-lg text-gray-500">Bienvenido, selecciona una práctica para ver más detalles.</p>
+    </div>
+  
+    <!-- Mostrar los paneles solo cuando hay una practica seleccionada -->
+    <mat-accordion *ngIf="practicaActual">
+      <!-- Panel Objetivo -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Objetivo </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="p-2">
+          <p>{{ practicaActual.objetivo }}</p>
+        </div>
+      </mat-expansion-panel>
+  
+      <!-- Panel Descripción -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Descripción </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="p-2">
+          <p>{{ practicaActual.descripcion }}</p>
+        </div>
+      </mat-expansion-panel>
+  
+      <!-- Panel Unidad -->
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Unidad </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="p-2">
+          <p>Unidad {{ practicaActual.unidad }}</p>
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+  
