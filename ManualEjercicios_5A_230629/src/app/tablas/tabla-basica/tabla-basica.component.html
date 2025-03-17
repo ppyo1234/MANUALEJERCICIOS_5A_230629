@@ -1,0 +1,18 @@
+<table #dataTable class="table table-striped">
+  <thead>
+    <tr>
+      <th>Comida</th>
+      <th>Región</th>
+      <th>Ingrediente Principal</th>
+      <th>Precio</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let food of foods">
+      <td>{{ food.name }}</td>
+      <td>{{ food.region }}</td>
+      <td>{{ food.mainIngredient }}</td>
+      <td>{{ food.price }}</td>
+    </tr>
+  </tbody>
+</table>

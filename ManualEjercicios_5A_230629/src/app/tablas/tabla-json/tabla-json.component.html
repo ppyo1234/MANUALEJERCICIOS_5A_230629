@@ -1,0 +1,21 @@
+<div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Artista</th>
+          <th>Género</th>
+          <th>País</th>
+          <th>Canción Destacada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let artist of artists">
+          <td>{{ artist.name }}</td>
+          <td>{{ artist.genre }}</td>
+          <td>{{ artist.country }}</td>
+          <td>{{ artist.topSong }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

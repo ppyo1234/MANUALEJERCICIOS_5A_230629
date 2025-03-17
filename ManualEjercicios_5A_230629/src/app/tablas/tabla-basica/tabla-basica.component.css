@@ -1,0 +1,51 @@
+/* 🎨 Estilos generales de la tabla */
+table.dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Arial', sans-serif;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: none;
+  }
+  
+  /* 🏷️ Encabezados */
+  table.dataTable thead {
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  table.dataTable thead th {
+    padding: 10px;
+    font-weight: normal;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* 📦 Celdas */
+  table.dataTable tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #f1f1f1;
+    color: #555;
+  }
+  
+  /* 🎨 Alternar colores en filas */
+  table.dataTable tbody tr:nth-child(even) {
+    background: #fafafa;
+  }
+  
+  /* ✨ Efecto hover en filas */
+  table.dataTable tbody tr:hover {
+    background: #f1f1f1;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  /* 📱 Hacer que la tabla sea responsiva */
+  @media screen and (max-width: 768px) {
+    table.dataTable {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  }
+  

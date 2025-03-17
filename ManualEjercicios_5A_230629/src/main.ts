@@ -17,6 +17,19 @@ import { Practica10Component } from './app/practicas/practica10/practica10.compo
 import { Practica11Component } from './app/practicas/practica11/practica11.component';
 import { Practica12Component } from './app/practicas/practica12/practica12.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { TablaBasicaComponent } from './app/tablas/tabla-basica/tabla-basica.component';
+import { TablaOpcionesComponent } from './app/tablas/tabla-opciones/tabla-opciones.component';
+import { TablaJsonComponent } from './app/tablas/tabla-json/tabla-json.component';
+import { TablaAjaxComponent } from './app/tablas/tabla-ajax/tabla-ajax.component';
+import { provideHttpClient } from '@angular/common/http';
+import { enableProdMode } from '@angular/core';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+bootstrapApplication(TablaAjaxComponent, {
+  providers: [provideHttpClient()],
+}).catch((err) => console.error(err));
+
+// Rutas de la aplicación
 const routes: Routes = [
   { path: 'Bienvenida', component: BienvenidaComponent },
   { path: 'page2', component: Page2Component },
@@ -33,10 +46,14 @@ const routes: Routes = [
   { path: 'practica10', component: Practica10Component},
   { path: 'practica11', component: Practica11Component},
   { path: 'practica12', component: Practica12Component},
-  
+  { path: 'tablaBasica', component: TablaBasicaComponent},
+  { path: 'tablaOpciones', component: TablaOpcionesComponent},
+  { path: 'tablaJSON', component: TablaJsonComponent},
+  { path: 'tablaAjax', component: TablaAjaxComponent},
   { path: '**', redirectTo: 'Bienvenida' },
 ];
 
+// Aquí se realiza el bootstrap de la aplicación con AppComponent y las rutas
 bootstrapApplication(AppComponent, {
-  providers: [provideRouter(routes), provideAnimationsAsync()],
+  providers: [provideHttpClient(), provideRouter(routes), provideAnimationsAsync()],
 }).catch((err) => console.error(err));

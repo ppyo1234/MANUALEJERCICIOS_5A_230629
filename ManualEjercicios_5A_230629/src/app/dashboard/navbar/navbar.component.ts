@@ -12,6 +12,8 @@ import { CommonModule } from '@angular/common';
 export class NavbarComponent {
   isLoggedIn = true;
 
+  
+
   logIn() {
     this.isLoggedIn = true; // Cambia el estado a logueado
   }
