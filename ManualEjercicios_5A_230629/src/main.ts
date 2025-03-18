@@ -24,6 +24,10 @@ import { TablaAjaxComponent } from './app/tablas/tabla-ajax/tabla-ajax.component
 import { provideHttpClient } from '@angular/common/http';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { GraficaBasicaComponent } from './app/graficas/grafica-basica/grafica-basica.component';
+import { GraficaMundoComponent } from './app/graficas/grafica-mundo/grafica-mundo.component';
+import { GraficaJsonComponent } from './app/graficas/grafica-json/grafica-json.component';
+import { GraficaAjaxComponent } from './app/graficas/grafica-ajax/grafica-ajax.component';
 
 bootstrapApplication(TablaAjaxComponent, {
   providers: [provideHttpClient()],
@@ -50,6 +54,11 @@ const routes: Routes = [
   { path: 'tablaOpciones', component: TablaOpcionesComponent},
   { path: 'tablaJSON', component: TablaJsonComponent},
   { path: 'tablaAjax', component: TablaAjaxComponent},
+  { path: 'graficaBasica', component: GraficaBasicaComponent},
+  { path: 'graficaMundo', component: GraficaMundoComponent},
+  { path: 'graficaJson', component: GraficaJsonComponent},
+  { path: 'graficaAjx', component: GraficaAjaxComponent},
+
   { path: '**', redirectTo: 'Bienvenida' },
 ];
 

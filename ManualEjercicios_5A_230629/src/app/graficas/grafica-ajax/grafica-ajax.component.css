@@ -1,0 +1,11 @@
+div {
+    width: 80%;  /* Ajusta el ancho al 80% del contenedor padre */
+    max-width: 800px;  /* Limita el ancho máximo */
+    margin: 0 auto;  /* Centra el contenedor */
+  }
+  
+  canvas {
+    width: 100% !important;  /* Ajusta el ancho al 100% del contenedor */
+    height: 400px !important;  /* Ajusta la altura a 400px */
+  }
+  

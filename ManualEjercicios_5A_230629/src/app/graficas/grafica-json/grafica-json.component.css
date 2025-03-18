@@ -1,0 +1,16 @@
+/* grafica-json.component.css */
+.grafica-container {
+  position: relative;
+  width: 80%;  /* Ajusta el ancho del gráfico */
+  height: 400px;  /* Ajusta la altura para hacerlo más compacto */
+  margin: 0 auto;  /* Centra el gráfico en la pantalla */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra sutil para el contenedor */
+  background-color: #fff;  /* Fondo blanco */
+}
+
+canvas {
+  width: 100% !important;  /* Aseguramos que el canvas ocupe todo el ancho del contenedor */
+  height: 100% !important;  /* Aseguramos que el canvas ocupe todo el alto del contenedor */
+}
+
