@@ -1,0 +1,37 @@
+<div class="dashboard-container">
+
+    <!-- Formulario de Registro -->
+  
+    <div class="form-container">
+  
+      <h3>Registrar Venta</h3>
+  
+      <form (submit)="registerSale()">
+  
+        <label>Producto:</label>
+  
+        <input type="text" [(ngModel)]="product" required>
+  
+        <label>Monto:</label>
+  
+        <input type="number" [(ngModel)]="amount" required>
+  
+        <button type="submit">Registrar</button>
+  
+      </form>
+  
+    </div>
+  
+    <!-- Gráfica de Ventas -->
+  
+    <div class="chart-container">
+  
+      <h3>Ventas por Día</h3>
+  
+      <div id="chartdiv"></div>
+  
+    </div>
+  
+  </div>
+  
+  
